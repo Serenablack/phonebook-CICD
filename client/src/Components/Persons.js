@@ -1,6 +1,3 @@
-import persons from "../service/persons";
-import axios from "axios";
-
 const Persons = ({ person, delPerson }) => {
   return (
     <div>
