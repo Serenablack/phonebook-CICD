@@ -1,0 +1,18 @@
+GET http://localhost:3001/persons/
+
+###
+
+DELETE http://localhost:3001/persons/62e89556a8273c3ca71a395a
+###
+POST  http://localhost:3001/persons
+content-type: application/json
+
+    {
+     "name": "joana" ,
+     "number":"2353454423"
+    }
+
+
+ ###
+
+ 

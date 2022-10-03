@@ -1,0 +1,12 @@
+.error {
+    color:red;
+    border:solid red 5px;
+    border-radius: 10px;
+    padding: 10px;
+}
+.success {
+    color:green;
+    border:solid green 5px;
+    border-radius:10px;
+    padding: 10px;
+}
