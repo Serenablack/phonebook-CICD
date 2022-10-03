@@ -30,16 +30,16 @@ jobs:
       #         build: npm run build
       #         start: npm run start-prod
       #         wait-on: http://localhost:5000
-      # - name: heroku deploy
-      #   uses: akhileshns/heroku-deploy@v3.12.12
+      - name: heroku deploy
+        uses: akhileshns/heroku-deploy@v3.12.12
 
-      #   with:
-      #     heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-      #     heroku_app_name: "gentle-spire-24254"
-      #     heroku_email: "sunsetsin1.sy@gmail.com"
-      #     healthcheck: "https://gentle-spire-24254.herokuapp.com/health"
-      #     checkstring: "ok"
-      #     rollbackonhealthcheckfailed: true
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "phonebook-cicd123"
+          heroku_email: "sunsetsin1.sy@gmail.com"
+          healthcheck: "https://phonebook-cicd123.herokuapp.com//health"
+          checkstring: "ok"
+          rollbackonhealthcheckfailed: true
 
   # tag_release:
   #   needs: [simple_deployment_pipeline]
