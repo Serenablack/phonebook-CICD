@@ -4,7 +4,7 @@ on:
     branches:
       - master
   schedule:
-    - cron:  '50 5 * * *'
+    - cron: "50 5 * * *"
 
 jobs:
   health_check:
@@ -13,8 +13,8 @@ jobs:
       - name: Check the deployed service URL
         uses: jtalk/url-health-check-action@v2
         with:
-          url: https://pokedexsand.herokuapp.com
-          follow-redirect: false 
-          max-attempts: 3 
-          retry-delay: 5s 
-          retry-all: false 
+          url: https://phonebook-cicd123.herokuapp.com/
+          follow-redirect: false
+          max-attempts: 3
+          retry-delay: 5s
+          retry-all: false

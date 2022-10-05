@@ -2,7 +2,8 @@ const express = require("express");
 const morgan = require("morgan");
 const App = express();
 const cors = require("cors");
-const Person = require("./server/models/person");
+const Person = require("./models/person");
+const path = require("path");
 
 App.use(express.static("./client/build"));
 App.use(cors());
@@ -45,9 +46,9 @@ App.use(
 //       "number": "39-23-6423122"
 //     }
 // ]
-App.get("*", (request, response) => {
-  response.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-});
+// App.get("*", (request, response) => {
+//   response.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+// });
 
 App.get("/", (request, response) => {
   response.send("<h1>Phonebook</h1>");
