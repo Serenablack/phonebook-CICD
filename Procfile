@@ -1,1 +1,1 @@
-web: cd ./client && nodemon index.js
+web: node index.js
