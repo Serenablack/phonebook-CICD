@@ -1,6 +1,9 @@
 {
-  "name": "phonebook",
+  "name": "phonebook-cicd",
   "version": "1.0.0",
+  "engines": {
+    "node": "16"
+  },
   "description": "",
   "main": "index.js",
   "scripts": {
