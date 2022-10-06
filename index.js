@@ -5,7 +5,7 @@ const cors = require("cors");
 const Person = require("./models/person");
 const path = require("path");
 
-App.use(express.static("./client/build"));
+App.use(express.static("build"));
 App.use(cors());
 App.use(express.json());
 App.use(
@@ -46,9 +46,9 @@ App.use(
 //       "number": "39-23-6423122"
 //     }
 // ]
-// App.get("*", (request, response) => {
-//   response.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-// });
+App.get("*", (request, response) => {
+  response.sendFile(path.resolve(__dirname, "./dist/index.html"));
+});
 
 App.get("/", (request, response) => {
   response.send("<h1>Phonebook</h1>");

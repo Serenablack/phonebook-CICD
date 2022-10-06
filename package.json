@@ -1,9 +1,9 @@
 {
   "name": "phonebook",
   "version": "1.0.0",
-  "engines": {
-    "node": "16"
-  },
+  // "engines": {
+  //   "node": "16"
+  // },
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,7 @@
     "server": "json-server --port 3001 --watch db.json",
     "dev": "cd ./client && nodemon index.js",
     "eslint": "eslint",
-    "build:ui": "rm -rf build && cd ./client && npm install && npm run build && cp -r build ../",
+    "build:ui": "rm -rf build && cd ./client && npm run build && cp -r build ../",
     "deploy": "git push heroku main",
     "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && npm run deploy",
     "logs:prod": "heroku logs --tail"
